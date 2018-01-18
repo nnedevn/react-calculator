@@ -19,7 +19,7 @@ class Calculator extends Component {
 
   handleClick(e) {
     this.state.input1 && this.state.input2 ? this.setState({result: this.state.input1 + this.state.input2}) : alert('Please enter two numeric values');
-    
+    console.log(this.props)
   }
 
   render() {
@@ -28,11 +28,9 @@ class Calculator extends Component {
         <h1>Calculate with React</h1>
         <div className="add">
           <input type="text" name="input1" onChange={this.handleChange } />
-
           <span> + </span>
           <input type="text" name="input2" onChange={this.handleChange} />
           <button onClick={this.handleClick}>Sum</button>
-          
         </div>
         <h3> Result: {this.state.result} </h3>
       </div>
