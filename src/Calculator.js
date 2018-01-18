@@ -18,9 +18,8 @@ class Calculator extends Component {
   }
 
   handleClick(e) {
-    this.setState({
-      result: this.state.input1 + this.state.input2
-    })
+    this.state.input1 && this.state.input2 ? this.setState({result: this.state.input1 + this.state.input2}) : alert('Please enter two numeric values');
+    
   }
 
   render() {
